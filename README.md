@@ -10,8 +10,28 @@ Pipeline completo de ingeniería de datos (batch + streaming) sobre datos abiert
 
 ```mermaid
 graph LR
-    A[Fuente de datos] --> B[Ingesta]
+    A[AEMET OpenData] --> B[Ingesta]
     B --> C[Almacenamiento]
     C --> D[Procesamiento]
     D --> E[Visualización / modelo]
+```
+## Fuentes de Datos
+
+| Fuente | URL / origen | Formato | Frecuencia de actualización | Licencia | Última ingesta |
+| --- | --- | --- | --- | --- | --- |
+| AEMET OpenData (Predicción por municipio - Valencia) | https://opendata.aemet.es/ | JSON | Diaria |  AEMET | 2026-10-14 |
+
+
+## Estructura del proyecto:
+
+``` bash
+.
+├── data/
+│   ├── raw/        # Datos crudos tal como llegan de la API
+│   ├── staged/     # Datos limpios y normalizados
+│   └── curated/    # Datos listos para modelar
+├── ingesta/        # Scripts de descarga de fuentes de datos
+├── .env            # Variables de entorno    
+├── .env.example    # Plantilla de variables de entorno
+└── README.md
 ```
