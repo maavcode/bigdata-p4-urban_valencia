@@ -1,0 +1,16 @@
+# Ignore the .env file
+.env
+
+# Ignore the virtual environment folder for python
+.venv
+
+
+#Ignore the data/raw content
+data/raw/**/*
+!data/raw/.gitkeep
+# Ignore the data/curated content
+data/curated/**/*
+!data/curated/.gitkeep
+# Ignore the data/staged content
+data/staged/**/*
+!data/staged/.gitkeep
